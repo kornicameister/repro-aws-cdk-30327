@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "test": "jest",
+    "test": "integ-runner --directory ./test/ --parallel-regions eu-central-1 --update-on-failed --clean",
     "cdk": "cdk"
   },
   "devDependencies": {
@@ -17,7 +17,9 @@
     "ts-jest": "^29.1.2",
     "aws-cdk": "2.143.0",
     "ts-node": "^10.9.2",
-    "typescript": "~5.4.5"
+    "typescript": "~5.4.5",
+    "@aws-cdk/integ-runner": "^2.143.0-alpha.0",
+    "@aws-cdk/integ-tests-alpha": "^2.143.0-alpha.0"
   },
   "dependencies": {
     "aws-cdk-lib": "2.143.0",
